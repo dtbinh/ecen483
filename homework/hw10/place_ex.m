@@ -1,0 +1,1 @@
+%  Example showing the use of place and acker for pole placementF = [-1 0; 1 0];G = [1; 0];pp = [-3+2j -3-2j];% place is more accurate for high-order systems, but cannot handle% multiple roots at the same location.Kplace = place(F,G,pp)Kacker = acker(F,G,pp)% check to see if CL roots are in the specified placetest = eig(F-G*Kplace)
